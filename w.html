@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web của tôi</title>
+    <style>
+        /* CSS: Kiểu dáng của trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chào mừng đến với trang web của tôi!</h1>
+        <p>Nhấn vào nút bên dưới để thay đổi màu nền của trang.</p>
+        <button onclick="changeBackgroundColor()">Thay đổi màu nền</button>
+    </div>
+
+    <script>
+        // JavaScript: Chức năng thay đổi màu nền
+        function changeBackgroundColor() {
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F0E68C', '#FF69B4'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
